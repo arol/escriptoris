@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  cerca.h
 //  escriptoris
 //
 //  Created by David Cortés on 15/12/11.
@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UINavigationController
+@interface cerca : UIViewController
+
+- (IBAction) enviar:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *botoEnviar;
+
 
 @end

@@ -7,15 +7,49 @@
 //
 
 #import "AppDelegate.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+#import "cerca.h"
+#import "resultats.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize tabBarController;
+
++ (AppDelegate *) instance
+{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    tabBarController = [[UITabBarController alloc] init] ;
+    
+    SecondViewController* vc2 = [[SecondViewController alloc] init];
+    
+    cerca* cercaView = [[cerca alloc] init];
+    
+
+    
+    navController = [[UINavigationController alloc]
+                                              initWithRootViewController:cercaView] ;
+    
+    NSArray* controllers = [NSArray arrayWithObjects:navController, vc2, nil];
+    
+    tabBarController.viewControllers = controllers;
+    
+    // Add the tab bar controller's current view as a subview of the window
+    [_window setRootViewController:tabBarController];
+    
     return YES;
+}
+- (void) obrirResultatsCerca
+{
+    resultats* resultatsView = [[resultats alloc] init];
+    
+    [navController pushViewController:resultatsView animated:YES];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

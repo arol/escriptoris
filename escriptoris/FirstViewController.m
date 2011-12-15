@@ -7,8 +7,10 @@
 //
 
 #import "FirstViewController.h"
+#import "cerca.h"
 
 @implementation FirstViewController
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -21,6 +23,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    cerca *viewCerca = [[cerca alloc]init];
+    [self pushViewController:viewCerca animated:NO];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

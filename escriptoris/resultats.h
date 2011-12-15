@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  resultats.h
 //  escriptoris
 //
 //  Created by David Cortés on 15/12/11.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UINavigationController
+@interface resultats : UIViewController
 
 @end
