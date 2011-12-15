@@ -75,11 +75,14 @@
     
     resultatsView.delegate = self;
     
-    [navController pushViewController:resultatsView animated:YES];
+
     
 }
 -(void)hemRebutLesDades
 {
+    
+    [navController pushViewController:resultatsView animated:YES];
+    
     NSLog(@"entrem un cop amb les dades: %@",resultatsArray);
 
 }

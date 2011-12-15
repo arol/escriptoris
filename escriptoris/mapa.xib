@@ -49,6 +49,7 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<bool key="IBMKShowsUserLocation">YES</bool>
 					</object>
 					<object class="IBUINavigationBar" id="322513948">
 						<reference key="NSNextResponder" ref="191373211"/>
