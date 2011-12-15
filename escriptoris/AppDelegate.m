@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FirstViewController.h"
-#import "SecondViewController.h"
+#import "historialViewController.h"
 #import "cerca.h"
 #import "resultats.h"
 
@@ -32,7 +32,7 @@
     tabBarController = [[UITabBarController alloc] init] ;
     
     
-    SecondViewController* vc2 = [[SecondViewController alloc] init];
+    historialViewController * vc2 = [[historialViewController alloc] init];
     
     cerca* cercaView = [[cerca alloc] init];
     

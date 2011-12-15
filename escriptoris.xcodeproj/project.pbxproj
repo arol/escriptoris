@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5517A15A149A51F3000AF2B6 /* historial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5517A158149A51F3000AF2B6 /* historial@2x.png */; };
 		5517A15B149A51F3000AF2B6 /* cerca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5517A159149A51F3000AF2B6 /* cerca@2x.png */; };
+		5517A15F149A5277000AF2B6 /* historialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5517A15D149A5277000AF2B6 /* historialViewController.m */; };
+		5517A160149A5277000AF2B6 /* historialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5517A15E149A5277000AF2B6 /* historialViewController.xib */; };
+		5517A162149A53B4000AF2B6 /* resultats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5517A161149A53B4000AF2B6 /* resultats.plist */; };
 		556601261499FEBA009DE0D3 /* resultatsMapa.m in Sources */ = {isa = PBXBuildFile; fileRef = 556601241499FEBA009DE0D3 /* resultatsMapa.m */; };
 		556601271499FEBA009DE0D3 /* resultatsMapa.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556601251499FEBA009DE0D3 /* resultatsMapa.xib */; };
 		5566012B149A01C2009DE0D3 /* mapa.m in Sources */ = {isa = PBXBuildFile; fileRef = 55660129149A01C2009DE0D3 /* mapa.m */; };
@@ -56,6 +59,10 @@
 /* Begin PBXFileReference section */
 		5517A158149A51F3000AF2B6 /* historial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "historial@2x.png"; sourceTree = "<group>"; };
 		5517A159149A51F3000AF2B6 /* cerca@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cerca@2x.png"; sourceTree = "<group>"; };
+		5517A15C149A5277000AF2B6 /* historialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = historialViewController.h; sourceTree = "<group>"; };
+		5517A15D149A5277000AF2B6 /* historialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = historialViewController.m; sourceTree = "<group>"; };
+		5517A15E149A5277000AF2B6 /* historialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = historialViewController.xib; sourceTree = "<group>"; };
+		5517A161149A53B4000AF2B6 /* resultats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = resultats.plist; sourceTree = "<group>"; };
 		556601231499FEBA009DE0D3 /* resultatsMapa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resultatsMapa.h; sourceTree = "<group>"; };
 		556601241499FEBA009DE0D3 /* resultatsMapa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resultatsMapa.m; sourceTree = "<group>"; };
 		556601251499FEBA009DE0D3 /* resultatsMapa.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = resultatsMapa.xib; sourceTree = "<group>"; };
@@ -190,6 +197,10 @@
 				557310B31499F2B50046FCCA /* first@2x.png */,
 				557310B51499F2B50046FCCA /* SecondViewController.h */,
 				557310B61499F2B50046FCCA /* SecondViewController.m */,
+				5517A15C149A5277000AF2B6 /* historialViewController.h */,
+				5517A15D149A5277000AF2B6 /* historialViewController.m */,
+				5517A161149A53B4000AF2B6 /* resultats.plist */,
+				5517A15E149A5277000AF2B6 /* historialViewController.xib */,
 				557310B81499F2B50046FCCA /* second.png */,
 				557310BA1499F2B50046FCCA /* second@2x.png */,
 				557310A01499F2B40046FCCA /* Supporting Files */,
@@ -332,6 +343,8 @@
 				9FCE7D08149A35CA0060E800 /* detall.xib in Resources */,
 				5517A15A149A51F3000AF2B6 /* historial@2x.png in Resources */,
 				5517A15B149A51F3000AF2B6 /* cerca@2x.png in Resources */,
+				5517A160149A5277000AF2B6 /* historialViewController.xib in Resources */,
+				5517A162149A53B4000AF2B6 /* resultats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +389,7 @@
 				556601261499FEBA009DE0D3 /* resultatsMapa.m in Sources */,
 				5566012B149A01C2009DE0D3 /* mapa.m in Sources */,
 				9FCE7D07149A35CA0060E800 /* detall.m in Sources */,
+				5517A15F149A5277000AF2B6 /* historialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
