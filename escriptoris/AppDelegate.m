@@ -50,6 +50,8 @@
     resultats* resultatsView = [[resultats alloc] init];
     
     [navController pushViewController:resultatsView animated:YES];
+
+    navController.title = @"Resultats de la cerca";
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

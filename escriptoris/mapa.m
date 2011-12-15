@@ -1,30 +1,28 @@
 //
-//  resultats.m
+//  mapa.m
 //  escriptoris
 //
 //  Created by David Cortés on 15/12/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "resultats.h"
 #import "mapa.h"
 
-@implementation resultats
+@implementation mapa
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+
     }
     return self;
 }
-- (IBAction)mapa:(id)sender
+
+- (IBAction)dismiss:(id)sender
 {
-    mapa *mapaView = [[mapa alloc]init];
-    [mapaView setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    [self presentModalViewController:mapaView animated:YES];
-    
+    [self dismissModalViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -44,6 +42,7 @@
 
 - (void)viewDidUnload
 {
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

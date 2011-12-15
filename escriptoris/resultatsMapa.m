@@ -1,15 +1,14 @@
 //
-//  resultats.m
+//  resultatsMapa.m
 //  escriptoris
 //
 //  Created by David Cortés on 15/12/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "resultats.h"
-#import "mapa.h"
+#import "resultatsMapa.h"
 
-@implementation resultats
+@implementation resultatsMapa
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -19,13 +18,7 @@
     }
     return self;
 }
-- (IBAction)mapa:(id)sender
-{
-    mapa *mapaView = [[mapa alloc]init];
-    [mapaView setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    [self presentModalViewController:mapaView animated:YES];
-    
-}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.

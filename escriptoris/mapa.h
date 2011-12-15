@@ -1,5 +1,5 @@
 //
-//  resultats.h
+//  mapa.h
 //  escriptoris
 //
 //  Created by David Cortés on 15/12/11.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface resultats : UIViewController
+@interface mapa : UIViewController
 
-- (IBAction)mapa:(id)sender;
+- (IBAction)dismiss:(id)sender;
 
 @end
