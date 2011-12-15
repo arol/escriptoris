@@ -36,5 +36,7 @@
 	</array>
 	<key>UILaunchImageFile</key>
 	<string>splash.png</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
 </dict>
 </plist>

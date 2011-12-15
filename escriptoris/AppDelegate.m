@@ -40,7 +40,7 @@
     navController = [[UINavigationController alloc]
                                               initWithRootViewController:cercaView];
     
-    navController.navigationBar.topItem.title = @"Cercar oficines";
+    navController.navigationBar.topItem.title = @"Cercar espais";
     
     [navController navigationBar].tintColor = [UIColor blackColor];
     

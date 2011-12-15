@@ -15,11 +15,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"resultats" ofType:@"plist"];
-        resultatsArray = [NSArray arrayWithContentsOfFile:plistPath];
-        NSLog(@"%@",resultatsArray);
-        [tableview reloadData];
-        NSLog(@"hola hola");
+        resultatsArray = [[NSArray alloc]init];
+
     }
     return self;
 }
@@ -37,26 +34,15 @@
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //Cel.la per a cada espai a reservar
     NSString *CellIdentifier = @"Cell";
-    NSArray *espai = [resultatsArray objectAtIndex:indexPath.row];
+    NSString *espai = [resultatsArray objectAtIndex:indexPath.row];
     
     
     UITableViewCell *cell;
     cell=[[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     
-    [cell.textLabel setText:[espai valueForKey:@"nom"]];
-	[cell.textLabel setShadowColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1]];
-	[cell.textLabel setShadowOffset:CGSizeMake(0, 1)];
-	[cell.textLabel setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0]];
-    
-    [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
-    
-	UIImage *image = [[UIImage imageNamed:@"cellBackground.png"] retain];	
-	UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-	imageView.image = image;
-	imageView.opaque = YES;
-	cell.backgroundView = imageView;
+    [cell.textLabel setText:espai];    
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%i de Gener del 2011 ",10+indexPath.row]];
 	
-	[imageView release];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     return cell;
@@ -75,7 +61,7 @@
 }
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return @"Resulats";
+    return @"Ultims espais visitats";
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -83,7 +69,7 @@
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	return 90;
+	return 60;
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -95,6 +81,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSString* elem1 = @"Espai Mezzine";
+    NSString* elem2 = @"Espai Mezzine";
+    NSString* elem3 = @"Torre Agbar";
+    
+    resultatsArray = [[NSArray alloc] initWithObjects:elem1,elem2,elem3,nil];
     [tableview reloadData];
 }
 

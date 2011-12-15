@@ -9,12 +9,13 @@
 			<string>empresa 3</string>
 		</dict>
 		<dict>
-			<key>New item</key>
-			<string></string>
 			<key>nom</key>
 			<string>empresa 2</string>
 		</dict>
-		<array/>
+		<dict>
+			<key>nom</key>
+			<string>empresa 2</string>
+		</dict>
 	</array>
 </dict>
 </plist>
