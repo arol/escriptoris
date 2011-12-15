@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "detall.h"
 
-@interface resultats : UIViewController <NSURLConnectionDataDelegate>
+@interface resultats : UIViewController <NSURLConnectionDataDelegate, UITableViewDelegate, UITableViewDataSource>
 {
- 
+    IBOutlet UITableView *tableView;
+    NSMutableArray *resultatsArray;
+    
+    detall *detallViewController;
 }
 
 - (void) ferRequestDelJson;
 - (IBAction)mapa:(id)sender;
+
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) NSMutableArray *resultatsArray;
 
 @end

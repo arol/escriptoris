@@ -35,6 +35,9 @@
 		557310E21499F78A0046FCCA /* cerca.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557310E01499F78A0046FCCA /* cerca.xib */; };
 		5586575B1499FAD500E0207E /* resultats.m in Sources */ = {isa = PBXBuildFile; fileRef = 558657591499FAD500E0207E /* resultats.m */; };
 		5586575C1499FAD500E0207E /* resultats.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5586575A1499FAD500E0207E /* resultats.xib */; };
+		9FCE7CFF149A29D50060E800 /* cellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FCE7CFE149A29D50060E800 /* cellBackground.png */; };
+		9FCE7D07149A35CA0060E800 /* detall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCE7D05149A35CA0060E800 /* detall.m */; };
+		9FCE7D08149A35CA0060E800 /* detall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FCE7D06149A35CA0060E800 /* detall.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,10 @@
 		558657581499FAD500E0207E /* resultats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resultats.h; sourceTree = "<group>"; };
 		558657591499FAD500E0207E /* resultats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resultats.m; sourceTree = "<group>"; };
 		5586575A1499FAD500E0207E /* resultats.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = resultats.xib; sourceTree = "<group>"; };
+		9FCE7CFE149A29D50060E800 /* cellBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellBackground.png; sourceTree = "<group>"; };
+		9FCE7D04149A35CA0060E800 /* detall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detall.h; sourceTree = "<group>"; };
+		9FCE7D05149A35CA0060E800 /* detall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detall.m; sourceTree = "<group>"; };
+		9FCE7D06149A35CA0060E800 /* detall.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detall.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +125,7 @@
 		5573108A1499F2B40046FCCA = {
 			isa = PBXGroup;
 			children = (
+				9FCE7CFC149A29800060E800 /* Resources */,
 				5566012D149A056F009DE0D3 /* MapKit.framework */,
 				5573109F1499F2B40046FCCA /* escriptoris */,
 				557310C81499F2B50046FCCA /* escriptorisTests */,
@@ -156,10 +164,10 @@
 				556601251499FEBA009DE0D3 /* resultatsMapa.xib */,
 				558657581499FAD500E0207E /* resultats.h */,
 				558657591499FAD500E0207E /* resultats.m */,
+				5586575A1499FAD500E0207E /* resultats.xib */,
 				55660128149A01C2009DE0D3 /* mapa.h */,
 				55660129149A01C2009DE0D3 /* mapa.m */,
 				5566012A149A01C2009DE0D3 /* mapa.xib */,
-				5586575A1499FAD500E0207E /* resultats.xib */,
 				557310DB1499F5440046FCCA /* ThirdViewController.xib */,
 				557310D91499F5440046FCCA /* ThirdViewController.h */,
 				557310DA1499F5440046FCCA /* ThirdViewController.m */,
@@ -175,6 +183,9 @@
 				557310B81499F2B50046FCCA /* second.png */,
 				557310BA1499F2B50046FCCA /* second@2x.png */,
 				557310A01499F2B40046FCCA /* Supporting Files */,
+				9FCE7D04149A35CA0060E800 /* detall.h */,
+				9FCE7D05149A35CA0060E800 /* detall.m */,
+				9FCE7D06149A35CA0060E800 /* detall.xib */,
 			);
 			path = escriptoris;
 			sourceTree = "<group>";
@@ -207,6 +218,22 @@
 				557310CB1499F2B50046FCCA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FCE7CFC149A29800060E800 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FCE7CFD149A29920060E800 /* Imatges */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9FCE7CFD149A29920060E800 /* Imatges */ = {
+			isa = PBXGroup;
+			children = (
+				9FCE7CFE149A29D50060E800 /* cellBackground.png */,
+			);
+			name = Imatges;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +316,8 @@
 				5586575C1499FAD500E0207E /* resultats.xib in Resources */,
 				556601271499FEBA009DE0D3 /* resultatsMapa.xib in Resources */,
 				5566012C149A01C2009DE0D3 /* mapa.xib in Resources */,
+				9FCE7CFF149A29D50060E800 /* cellBackground.png in Resources */,
+				9FCE7D08149A35CA0060E800 /* detall.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +361,7 @@
 				5586575B1499FAD500E0207E /* resultats.m in Sources */,
 				556601261499FEBA009DE0D3 /* resultatsMapa.m in Sources */,
 				5566012B149A01C2009DE0D3 /* mapa.m in Sources */,
+				9FCE7D07149A35CA0060E800 /* detall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
