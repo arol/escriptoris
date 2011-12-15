@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "resultatsDelegate.h"
+#import "resultats.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,resultatsDelegate,CLLocationManagerDelegate>
 {
     UITabBarController  *tabBarController;
     UINavigationController *navController;
     NSMutableArray *resultatsArray;
+    resultats *resultatsView;
+    CLLocation *localitzacioUsuari;
 }
 
 + (AppDelegate *) instance;
@@ -21,6 +25,10 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITabBarController *tabBarController;
 @property (strong, nonatomic) NSMutableArray  *resultatsArray;
+
 @property (strong, nonatomic) UINavigationController  *navController;
+
+@property (strong,nonatomic) CLLocation *localitzacioUsuari;
+
 
 @end

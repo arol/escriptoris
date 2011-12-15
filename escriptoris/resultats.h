@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "detall.h"
+#import "resultatsDelegate.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface resultats : UIViewController <NSURLConnectionDataDelegate, UITableViewDelegate, UITableViewDataSource>
 {
@@ -15,6 +17,8 @@
     NSMutableArray *resultatsArray;
     
     detall *detallViewController;
+    id <resultatsDelegate> delegate;
+    NSMutableData *dataTotal;
 }
 
 - (void) ferRequestDelJson;
@@ -22,5 +26,7 @@
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) NSMutableArray *resultatsArray;
+
+@property (nonatomic, retain) id <resultatsDelegate> delegate;
 
 @end
