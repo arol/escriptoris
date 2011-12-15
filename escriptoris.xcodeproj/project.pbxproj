@@ -42,26 +42,26 @@
 		557310991499F2B40046FCCA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5573109B1499F2B40046FCCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5573109D1499F2B40046FCCA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		557310A11499F2B40046FCCA /* escriptoris-Info.plist */ = {isa = PBXFileReference; path = "escriptoris-Info.plist"; sourceTree = "<group>"; };
+		557310A11499F2B40046FCCA /* escriptoris-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "escriptoris-Info.plist"; sourceTree = "<group>"; };
 		557310A31499F2B40046FCCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		557310A51499F2B40046FCCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		557310A71499F2B40046FCCA /* escriptoris-Prefix.pch */ = {isa = PBXFileReference; path = "escriptoris-Prefix.pch"; sourceTree = "<group>"; };
-		557310A81499F2B40046FCCA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		557310A71499F2B40046FCCA /* escriptoris-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "escriptoris-Prefix.pch"; sourceTree = "<group>"; };
+		557310A81499F2B40046FCCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557310A91499F2B40046FCCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		557310AC1499F2B40046FCCA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		557310AE1499F2B40046FCCA /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		557310AE1499F2B40046FCCA /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		557310AF1499F2B50046FCCA /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		557310B11499F2B50046FCCA /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		557310B31499F2B50046FCCA /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		557310B51499F2B50046FCCA /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		557310B51499F2B50046FCCA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		557310B61499F2B50046FCCA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		557310B81499F2B50046FCCA /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		557310BA1499F2B50046FCCA /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		557310C11499F2B50046FCCA /* escriptorisTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = escriptorisTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		557310C21499F2B50046FCCA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		557310CA1499F2B50046FCCA /* escriptorisTests-Info.plist */ = {isa = PBXFileReference; path = "escriptorisTests-Info.plist"; sourceTree = "<group>"; };
+		557310CA1499F2B50046FCCA /* escriptorisTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "escriptorisTests-Info.plist"; sourceTree = "<group>"; };
 		557310CC1499F2B50046FCCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		557310CE1499F2B50046FCCA /* escriptorisTests.h */ = {isa = PBXFileReference; path = escriptorisTests.h; sourceTree = "<group>"; };
+		557310CE1499F2B50046FCCA /* escriptorisTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = escriptorisTests.h; sourceTree = "<group>"; };
 		557310CF1499F2B50046FCCA /* escriptorisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = escriptorisTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
