@@ -55,13 +55,19 @@
     return self;
 }
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation{
-    MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
-    annView.pinColor = MKPinAnnotationColorGreen;
-    annView.animatesDrop=TRUE;
-    annView.canShowCallout = YES;
-    annView.calloutOffset = CGPointMake(-5, 5);
-    NSLog(@"view for annotation");
-    return annView;
+    if (annotation == mapView.userLocation)
+    {
+        return nil;
+    }
+    else{
+        MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
+        annView.pinColor = MKPinAnnotationColorGreen;
+        annView.animatesDrop=TRUE;
+        annView.canShowCallout = YES;
+        annView.calloutOffset = CGPointMake(-5, 5);
+        NSLog(@"view for annotation");
+        return annView;
+    }
 }
 - (IBAction)dismiss:(id)sender
 {
@@ -83,29 +89,30 @@
     NSMutableArray *resultatsArray = [[AppDelegate instance] resultatsArray];
     
     NSLog(@"%@",resultatsArray);
-    float latituds = 0;
-    float longituds = 0;
-    int count = 0;
+    
+    CLLocation *localitzacio = [[AppDelegate instance] localitzacioUsuari];
+    
+    for (id annotation in map.annotations) {
+        [map removeAnnotation: annotation];
+    }
     
     for (NSArray *objecte in resultatsArray) {
-        // NSLog(@"%@",[objecte valueForKey:@"lat"]);        
-        // NSLog(@"%@",[objecte valueForKey:@"lang"]); 
         
         CLLocationCoordinate2D coord;
         coord.latitude = [[objecte valueForKey:@"lat"] doubleValue];
         coord.longitude = [[objecte valueForKey:@"lang"] doubleValue];
-        
-        NSLog(@"%f",coord.latitude);
-        NSLog(@"%f",coord.longitude);
-        
-        latituds += coord.latitude;
-        longituds += coord.longitude;
-        count++;
-        
-        //MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
+   
         AddressAnnotation *annotation = [[AddressAnnotation alloc]initWithCoordinate:coord];
-        annotation.titol = [objecte valueForKey:@"nom"];
+
+        CLLocation *locationPunt = [[CLLocation alloc]initWithLatitude:coord.latitude longitude:coord.longitude];
+        int distancia = (int)[localitzacio distanceFromLocation:locationPunt];
+        NSLog(@"%i",distancia);
+        
+        annotation.titol = [NSString stringWithFormat:@"%@",[objecte valueForKey:@"nom"],distancia];
+        
         annotation.subtitol = [objecte valueForKey:@"direccio"];
+        
+        NSLog(@"%@",annotation.subtitol);        
         
         [map addAnnotation:annotation];
         
@@ -119,10 +126,9 @@
     MKCoordinateSpan span;
     span.latitudeDelta=0.05;
     span.longitudeDelta=0.05;
-    CLLocation *localitzacio = [[AppDelegate instance] localitzacioUsuari];
+
     region.center=  localitzacio.coordinate;
     region.span = span;
-    
 
     [map setRegion:region animated:TRUE];
     [map regionThatFits:region];

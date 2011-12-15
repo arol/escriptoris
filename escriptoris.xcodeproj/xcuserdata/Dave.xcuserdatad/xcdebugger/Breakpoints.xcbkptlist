@@ -37,11 +37,25 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "escriptoris/mapa.m"
-         timestampString = "345646149.811768"
+         timestampString = "345654574.172582"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "89"
-         endingLineNumber = "89"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "escriptoris/mapa.m"
+         timestampString = "345654149.96105"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "90"
+         endingLineNumber = "90"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
