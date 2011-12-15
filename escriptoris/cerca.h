@@ -12,7 +12,7 @@
 
 - (IBAction) enviar:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *botoEnviar;
+@property (retain, nonatomic) IBOutlet UIButton *botoEnviar;
 
 
 @end

@@ -25,7 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-            
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     tabBarController = [[UITabBarController alloc] init] ;
     
@@ -44,7 +44,10 @@
     tabBarController.viewControllers = controllers;
     
     // Add the tab bar controller's current view as a subview of the window
-    [_window setRootViewController:tabBarController];
+//    [_window setRootViewController:tabBarController];
+    self.window.rootViewController = tabBarController;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
