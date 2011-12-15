@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5517A15A149A51F3000AF2B6 /* historial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5517A158149A51F3000AF2B6 /* historial@2x.png */; };
+		5517A15B149A51F3000AF2B6 /* cerca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5517A159149A51F3000AF2B6 /* cerca@2x.png */; };
 		556601261499FEBA009DE0D3 /* resultatsMapa.m in Sources */ = {isa = PBXBuildFile; fileRef = 556601241499FEBA009DE0D3 /* resultatsMapa.m */; };
 		556601271499FEBA009DE0D3 /* resultatsMapa.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556601251499FEBA009DE0D3 /* resultatsMapa.xib */; };
 		5566012B149A01C2009DE0D3 /* mapa.m in Sources */ = {isa = PBXBuildFile; fileRef = 55660129149A01C2009DE0D3 /* mapa.m */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5517A158149A51F3000AF2B6 /* historial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "historial@2x.png"; sourceTree = "<group>"; };
+		5517A159149A51F3000AF2B6 /* cerca@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cerca@2x.png"; sourceTree = "<group>"; };
 		556601231499FEBA009DE0D3 /* resultatsMapa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resultatsMapa.h; sourceTree = "<group>"; };
 		556601241499FEBA009DE0D3 /* resultatsMapa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resultatsMapa.m; sourceTree = "<group>"; };
 		556601251499FEBA009DE0D3 /* resultatsMapa.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = resultatsMapa.xib; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 		557310A01499F2B40046FCCA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5517A158149A51F3000AF2B6 /* historial@2x.png */,
+				5517A159149A51F3000AF2B6 /* cerca@2x.png */,
 				557310A11499F2B40046FCCA /* escriptoris-Info.plist */,
 				557310A21499F2B40046FCCA /* InfoPlist.strings */,
 				557310A51499F2B40046FCCA /* main.m */,
@@ -324,6 +330,8 @@
 				5566012C149A01C2009DE0D3 /* mapa.xib in Resources */,
 				9FCE7CFF149A29D50060E800 /* cellBackground.png in Resources */,
 				9FCE7D08149A35CA0060E800 /* detall.xib in Resources */,
+				5517A15A149A51F3000AF2B6 /* historial@2x.png in Resources */,
+				5517A15B149A51F3000AF2B6 /* cerca@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

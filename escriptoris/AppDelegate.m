@@ -37,13 +37,24 @@
     cerca* cercaView = [[cerca alloc] init];
     
 
-    
     navController = [[UINavigationController alloc]
-                                              initWithRootViewController:cercaView] ;
+                                              initWithRootViewController:cercaView];
+    
+    navController.navigationBar.topItem.title = @"Cercar oficines";
+    
+    [navController navigationBar].tintColor = [UIColor blackColor];
     
     NSArray* controllers = [NSArray arrayWithObjects:navController, vc2, nil];
     
     tabBarController.viewControllers = controllers;
+    
+    UITabBarItem *tabItem = [[[tabBarController tabBar] items] objectAtIndex:0];
+    [tabItem setTitle:@"Cerca"];
+    [tabItem setImage:[UIImage imageNamed:@"cerca.png"]];
+    
+    UITabBarItem *tabItem2 = [[[tabBarController tabBar] items] objectAtIndex:1];
+    [tabItem2 setTitle:@"Historial"];
+    [tabItem2 setImage:[UIImage imageNamed:@"historial.png"]];
     
     // Add the tab bar controller's current view as a subview of the window
 //    [_window setRootViewController:tabBarController];
@@ -81,7 +92,11 @@
 -(void)hemRebutLesDades
 {
     
+    navController.navigationBar.topItem.title = @"Cerca";
+    
     [navController pushViewController:resultatsView animated:YES];
+    
+    navController.navigationBar.topItem.title = @"Resultats";
     
     NSLog(@"entrem un cop amb les dades: %@",resultatsArray);
 
