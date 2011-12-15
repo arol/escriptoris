@@ -108,7 +108,7 @@
         int distancia = (int)[localitzacio distanceFromLocation:locationPunt];
         NSLog(@"%i",distancia);
         
-        annotation.titol = [NSString stringWithFormat:@"%@",[objecte valueForKey:@"nom"],distancia];
+        annotation.titol = [objecte valueForKey:@"nom"];
         
         annotation.subtitol = [objecte valueForKey:@"direccio"];
         
