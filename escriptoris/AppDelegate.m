@@ -17,6 +17,7 @@
 @synthesize window = _window;
 @synthesize tabBarController;
 @synthesize resultatsArray;
+@synthesize navController;
 
 + (AppDelegate *) instance
 {
