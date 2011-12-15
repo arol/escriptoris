@@ -8,6 +8,7 @@
 
 #import "resultats.h"
 #import "mapa.h"
+#import "AppDelegate.h"
 
 @implementation resultats
 
@@ -15,9 +16,31 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+
+        [self ferRequestDelJson];
     }
     return self;
+}
+- (void) ferRequestDelJson
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest 
+                                    requestWithURL:[NSURL URLWithString:@"http://escriptoris.herokuapp.com/espais.json"]];
+    
+    [[NSURLConnection alloc]initWithRequest:request delegate:self];    
+}
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    NSError *error;
+    
+    [[AppDelegate instance] setResultatsArray:[NSJSONSerialization JSONObjectWithData:data options:0 error:&error]];
+    
+    NSLog(@"%@",[[AppDelegate instance] resultatsArray]);
+    
+    for (NSArray *objecte in [[AppDelegate instance] resultatsArray]) {
+        NSLog(@"%@",[objecte valueForKey:@"codipostal"]);        
+    }
+
+    
 }
 - (IBAction)mapa:(id)sender
 {

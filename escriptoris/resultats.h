@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface resultats : UIViewController
+@interface resultats : UIViewController <NSURLConnectionDataDelegate>
+{
+ 
+}
 
+- (void) ferRequestDelJson;
 - (IBAction)mapa:(id)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "mapa.h"
+#import "AppDelegate.h"
 
 @implementation mapa
 
@@ -15,6 +16,12 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        NSMutableArray *resultatsArray = [[AppDelegate instance] resultatsArray];
+        
+        for (NSArray *objecte in resultatsArray) {
+            NSLog(@"%@",[objecte valueForKey:@"lat"]);        
+            NSLog(@"%@",[objecte valueForKey:@"lang"]);        
+        }
 
     }
     return self;

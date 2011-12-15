@@ -16,6 +16,7 @@
 
 @synthesize window = _window;
 @synthesize tabBarController;
+@synthesize resultatsArray;
 
 + (AppDelegate *) instance
 {
@@ -24,8 +25,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+            
     // Override point for customization after application launch.
     tabBarController = [[UITabBarController alloc] init] ;
+    
     
     SecondViewController* vc2 = [[SecondViewController alloc] init];
     
@@ -48,6 +51,8 @@
 - (void) obrirResultatsCerca
 {
     resultats* resultatsView = [[resultats alloc] init];
+    
+    resultatsArray = [[NSMutableArray alloc]init];
     
     [navController pushViewController:resultatsView animated:YES];
 

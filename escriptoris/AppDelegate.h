@@ -12,6 +12,7 @@
 {
     UITabBarController  *tabBarController;
     UINavigationController *navController;
+    NSMutableArray *resultatsArray;
 }
 
 + (AppDelegate *) instance;
@@ -19,5 +20,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITabBarController *tabBarController;
+@property (strong, nonatomic) NSMutableArray  *resultatsArray;
 
 @end
