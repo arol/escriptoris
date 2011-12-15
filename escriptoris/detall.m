@@ -16,6 +16,7 @@
 @synthesize navBar;
 @synthesize imatge;
 @synthesize espai;
+@synthesize tags;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,6 +48,7 @@
     [nom setText:[espai valueForKey:@"nom"]];
     [descripcio setText:[espai valueForKey:@"descripcio"]];
     [direccio setText:[espai valueForKey:@"direccio"]];
+    [tags setText:[espai valueForKey:@"tags"]];
     
     NSURL * imageURL = [NSURL URLWithString:[espai valueForKey:@"imatge"]];
     NSData * imageData = [NSData dataWithContentsOfURL:imageURL];

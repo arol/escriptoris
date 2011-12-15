@@ -12,6 +12,7 @@
     IBOutlet UILabel *descripcio;
     IBOutlet UILabel *direccio;
     IBOutlet UILabel *nom;
+    IBOutlet UILabel *tags;
     
     IBOutlet UIImageView *imatge;
     
@@ -23,6 +24,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *descripcio;
 @property (nonatomic, retain) IBOutlet UILabel *direccio;
 @property (nonatomic, retain) IBOutlet UILabel *nom;
+@property (nonatomic, retain) IBOutlet UILabel *tags;
 @property (nonatomic, retain) IBOutlet UIImageView *imatge;
 @property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
 @property (nonatomic, retain) NSArray *espai;
