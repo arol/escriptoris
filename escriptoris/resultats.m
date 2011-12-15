@@ -73,7 +73,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+        
     resultatsArray = [[AppDelegate instance] resultatsArray];
 }
 
@@ -96,6 +96,14 @@
     NSString *CellIdentifier = @"Cell";
     NSArray *espai = [resultatsArray objectAtIndex:indexPath.row];
     
+    CLLocationCoordinate2D coord;
+    coord.latitude = [[espai valueForKey:@"lat"] doubleValue];
+    coord.longitude = [[espai valueForKey:@"lang"] doubleValue];
+    
+    CLLocation *localitzacio = [[AppDelegate instance] localitzacioUsuari];
+    CLLocation *locationPunt = [[CLLocation alloc]initWithLatitude:coord.latitude longitude:coord.longitude];
+    int distancia = (int)[localitzacio distanceFromLocation:locationPunt];
+
     
     UITableViewCell *cell;
     cell=[[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
@@ -105,7 +113,7 @@
 	[cell.textLabel setShadowOffset:CGSizeMake(0, 1)];
 	[cell.textLabel setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0]];
     
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", [espai valueForKey:@"lat"]]];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%i m", distancia]];
 	[cell.detailTextLabel setTextColor:[UIColor colorWithRed:0.34 green:0.34 blue:0.34 alpha:1]];
 	[cell.detailTextLabel setShadowColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:1]];
 	[cell.detailTextLabel setShadowOffset:CGSizeMake(0, 1)];
