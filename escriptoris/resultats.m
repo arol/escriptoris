@@ -11,36 +11,40 @@
 #import "AppDelegate.h"
 
 @implementation resultats
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
-        [self ferRequestDelJson];
+        [self ferRequestDelJson];      
     }
     return self;
 }
 - (void) ferRequestDelJson
 {
+    NSLog(@"dale al request");
     NSMutableURLRequest *request = [NSMutableURLRequest 
                                     requestWithURL:[NSURL URLWithString:@"http://escriptoris.herokuapp.com/espais.json"]];
     
-    [[NSURLConnection alloc]initWithRequest:request delegate:self];    
+    [[NSURLConnection alloc]initWithRequest:request delegate:self];   
+
 }
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    NSError *error;
-    
-    [[AppDelegate instance] setResultatsArray:[NSJSONSerialization JSONObjectWithData:data options:0 error:&error]];
-    
-    NSLog(@"%@",[[AppDelegate instance] resultatsArray]);
-    
-    for (NSArray *objecte in [[AppDelegate instance] resultatsArray]) {
-        NSLog(@"%@",[objecte valueForKey:@"codipostal"]);        
+    if (dataTotal == nil){
+        dataTotal = [[NSMutableData alloc]initWithLength:0];
     }
+    [dataTotal appendData:data];
+}
+-(void)connectionDidFinishLoading:(NSURLConnection *)theConnection
+{
+    NSError *error;
+    NSLog(@"%@",dataTotal);
+    [[AppDelegate instance] setResultatsArray:[NSJSONSerialization JSONObjectWithData:dataTotal options:0 error:&error]];
 
-    
+    NSLog(@"Dades rebudes: %@",[[AppDelegate instance] resultatsArray]);
+    [delegate hemRebutLesDades];
 }
 - (IBAction)mapa:(id)sender
 {

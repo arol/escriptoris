@@ -12,6 +12,7 @@
 		5566012B149A01C2009DE0D3 /* mapa.m in Sources */ = {isa = PBXBuildFile; fileRef = 55660129149A01C2009DE0D3 /* mapa.m */; };
 		5566012C149A01C2009DE0D3 /* mapa.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5566012A149A01C2009DE0D3 /* mapa.xib */; };
 		5566012E149A056F009DE0D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5566012D149A056F009DE0D3 /* MapKit.framework */; };
+		556601EE149A3613009DE0D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556601ED149A3612009DE0D3 /* CoreLocation.framework */; };
 		5573109A1499F2B40046FCCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557310991499F2B40046FCCA /* UIKit.framework */; };
 		5573109C1499F2B40046FCCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5573109B1499F2B40046FCCA /* Foundation.framework */; };
 		5573109E1499F2B40046FCCA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5573109D1499F2B40046FCCA /* CoreGraphics.framework */; };
@@ -55,6 +56,8 @@
 		55660129149A01C2009DE0D3 /* mapa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapa.m; sourceTree = "<group>"; };
 		5566012A149A01C2009DE0D3 /* mapa.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mapa.xib; sourceTree = "<group>"; };
 		5566012D149A056F009DE0D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		556601E4149A2564009DE0D3 /* resultatsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resultatsDelegate.h; sourceTree = "<group>"; };
+		556601ED149A3612009DE0D3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		557310951499F2B40046FCCA /* escriptoris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = escriptoris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557310991499F2B40046FCCA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5573109B1499F2B40046FCCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556601EE149A3613009DE0D3 /* CoreLocation.framework in Frameworks */,
 				5566012E149A056F009DE0D3 /* MapKit.framework in Frameworks */,
 				5573109A1499F2B40046FCCA /* UIKit.framework in Frameworks */,
 				5573109C1499F2B40046FCCA /* Foundation.framework in Frameworks */,
@@ -118,6 +122,7 @@
 		5573108A1499F2B40046FCCA = {
 			isa = PBXGroup;
 			children = (
+				556601ED149A3612009DE0D3 /* CoreLocation.framework */,
 				5566012D149A056F009DE0D3 /* MapKit.framework */,
 				5573109F1499F2B40046FCCA /* escriptoris */,
 				557310C81499F2B50046FCCA /* escriptorisTests */,
@@ -156,6 +161,7 @@
 				556601251499FEBA009DE0D3 /* resultatsMapa.xib */,
 				558657581499FAD500E0207E /* resultats.h */,
 				558657591499FAD500E0207E /* resultats.m */,
+				556601E4149A2564009DE0D3 /* resultatsDelegate.h */,
 				55660128149A01C2009DE0D3 /* mapa.h */,
 				55660129149A01C2009DE0D3 /* mapa.m */,
 				5566012A149A01C2009DE0D3 /* mapa.xib */,

@@ -17,6 +17,7 @@
 @synthesize window = _window;
 @synthesize tabBarController;
 @synthesize resultatsArray;
+@synthesize localitzacioUsuari;
 
 + (AppDelegate *) instance
 {
@@ -49,19 +50,39 @@
     
     [self.window makeKeyAndVisible];
     
+    resultatsArray = [[NSMutableArray alloc]init];  
+    
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    [locationManager startUpdatingLocation];   
+
+    localitzacioUsuari = [[CLLocation alloc]init];
     return YES;
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"Location: %@", [newLocation description]);
+    
+    if (localitzacioUsuari != nil) [localitzacioUsuari release];
+    localitzacioUsuari = [newLocation copy];
 }
 - (void) obrirResultatsCerca
 {
-    resultats* resultatsView = [[resultats alloc] init];
+    resultatsView = [[resultats alloc] init];
     
-    resultatsArray = [[NSMutableArray alloc]init];
+    resultatsView.delegate = self;
     
     [navController pushViewController:resultatsView animated:YES];
-
-    navController.title = @"Resultats de la cerca";
+    
 }
-							
+-(void)hemRebutLesDades
+{
+    NSLog(@"entrem un cop amb les dades: %@",resultatsArray);
+
+}
+					
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*

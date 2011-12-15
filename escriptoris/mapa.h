@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <MapKit/MKAnnotation.h>
 
-@interface mapa : UIViewController
+@interface mapa : UIViewController <MKMapViewDelegate>
 
 - (IBAction)dismiss:(id)sender;
+@property (retain, nonatomic) IBOutlet MKMapView *map;
 
 @end
